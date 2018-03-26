@@ -15,6 +15,54 @@ router.get('/', function(req, res) {
 	});
 });
 
+router.get('/register', function(req, res) {
+	res.render('register', {
+		static_path: 'public',
+		theme: process.env.THEME || 'default',
+		flask_debug: process.env.FLASK_DEBUG || 'false'
+	});
+});
+
+router.get('/about', function(req, res) {
+	res.render('about', {
+		static_path: 'public',
+		theme: process.env.THEME || 'default',
+		flask_debug: process.env.FLASK_DEBUG || 'false'
+	});
+});
+
+router.get('/faq', function(req, res) {
+	res.render('faq', {
+		static_path: 'public',
+		theme: process.env.THEME || 'default',
+		flask_debug: process.env.FLASK_DEBUG || 'false'
+	});
+});
+
+router.get('/login', function(req, res) {
+	res.render('login', {
+		static_path: 'public',
+		theme: process.env.THEME || 'default',
+		flask_debug: process.env.FLASK_DEBUG || 'false'
+	});
+});
+
+router.get('/blog', function(req, res) {
+	res.render('blog', {
+		static_path: 'public',
+		theme: process.env.THEME || 'default',
+		flask_debug: process.env.FLASK_DEBUG || 'false'
+	});
+});
+
+router.get('/contact', function(req, res) {
+	res.render('contact', {
+		static_path: 'public',
+		theme: process.env.THEME || 'default',
+		flask_debug: process.env.FLASK_DEBUG || 'false'
+	});
+});
+
 router.post('/signup', function(req, res) {
 	var item = {
 		'email': {'S': req.body.email},
